@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Trunfo - Gigantes da Tecnologia</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<h1>Super Trunfo</h1>
+<div class="placar">
+<div id="placar-jogador">Jogador: 0</div>
+<div id="placar-maquina">Máquina: 0</div>
+</div>
+<div class="arena">
+<div id="carta-jogador" class="carta"></div>
+<div id="carta-maquina" class="carta verso"></div>
+</div>
+<div class="controles">
+<button id="btn-jogar">Jogar</button>
+<button id="btn-pausar" disabled>Pausar</button> <button id="btn-proxima-rodada" disabled>Próxima
+Rodada</button>
+<div id="pause-overlay" class="pause-overlay hidden">
+<h2>JOGO PAUSADO</h2>
+</div>
+</div>
+<div id="resultado" class="resultado"></div>
+</div>
+<audio id="sound-win" src="https://www.myinstants.com/media/sounds/coin.mp3" preload="auto"></audio>
+<audio id="sound-lose" src="https://www.myinstants.com/media/sounds/erro.mp3" preload="auto"></audio>
+<script src="js/cartas.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

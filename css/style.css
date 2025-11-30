@@ -1,0 +1,327 @@
+/* style.css */
+
+body {
+
+    font-family:'Press Start 2P', cursive; /* Sugestão de fonte estilo retro game */
+
+    background-color:#1a1a2e;
+
+    color:#e0e0e0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    margin:0;
+
+}
+
+ 
+
+.container {
+
+    text-align:center;
+
+    background-color:#16213e;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    border:2pxsolid#0f3460;
+
+}
+
+ 
+
+h1 {
+
+    color:#e94560;
+
+}
+
+ 
+
+/* .placar {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    font-size: 1.2em;
+
+    margin-bottom: 20px;
+
+} */
+
+ 
+
+/* Substitua a regra .placar existente por esta */
+
+.placar {
+
+    display:flex;
+
+    justify-content:space-around;
+
+    font-size:1.5em; /* Aumenta um pouco a fonte */
+
+    margin:20pxauto;
+
+    padding:10px;
+
+    background-color:#000; /* Fundo preto clássico */
+
+    border:4pxsolid#e0e0e0;
+
+    border-radius:8px;
+
+    box-shadow:inset0010px#000;
+
+    width:80%;
+
+}
+
+ 
+
+/* E adicione um text-shadow aos placares individuais */
+
+#placar-jogador,#placar-maquina {
+
+    color:#fcdf3a; /* Cor amarela/dourada */
+
+    text-shadow:2px2px0px#c14444; /* Sombra vermelha para efeito 2D */
+
+}
+
+ 
+
+.arena {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    height:450px; /* Altura fixa para as cartas */
+
+    margin-bottom:20px;
+
+}
+
+ 
+
+.carta {
+
+    width:300px;
+
+    height:100%;
+
+    background-color:#e0e0e0;
+
+    color:#16213e;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    box-shadow:04px8pxrgba(0,0,0,0.5);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+ 
+
+.carta.verso {
+
+    background-color:#e94560;
+
+    background-image:url('https://i.imgur.com/M1y0_V5.png'); /* Exemplo de verso de carta */
+
+    background-size:50%;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+}
+
+ 
+
+.carta-nome {
+
+    font-size:1.5em;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+ 
+
+.carta-imagem {
+
+    width:90%;
+
+    max-height:150px;
+
+    object-fit:contain;
+
+    align-self:center;
+
+    margin-bottom:15px;
+
+}
+
+ 
+
+.carta-atributos ul {
+
+    list-style:none;
+
+    padding:0;
+
+    text-align:left;
+
+}
+
+ 
+
+.carta-atributos li {
+
+    padding:8px;
+
+    margin-bottom:5px;
+
+    background-color:#f1f1f1;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition: background-color 0.3s, transform 0.2s;
+
+}
+
+ 
+
+.carta-atributos li:hover {
+
+    background-color:#e94560;
+
+    color:white;
+
+    transform:scale(1.05);
+
+}
+
+ 
+
+.controles button {
+
+    padding:10px20px;
+
+    font-size:1em;
+
+    font-family:inherit;
+
+    background-color:#0f3460;
+
+    color:#e0e0e0;
+
+    border:2pxsolid#e94560;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    margin:010px;
+
+    transition: background-color 0.3s;
+
+}
+
+ 
+
+.controles button:disabled {
+
+    cursor:not-allowed;
+
+    opacity:0.5;
+
+}
+
+ 
+
+.controles button:hover:not(:disabled) {
+
+    background-color:#e94560;
+
+}
+
+ 
+
+.resultado {
+
+    margin-top:20px;
+
+    font-size:1.2em;
+
+    height:30px;
+
+    font-weight:bold;
+
+}
+
+ 
+
+/* Adicione este código ao final do seu style.css */
+
+.pause-overlay {
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background-color:rgba(22, 33, 62, 0.85); /* Fundo semi-transparente */
+
+    color:#e94560;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2.5em;
+
+    border-radius:15px; /* Para acompanhar o container */
+
+    text-shadow:3px3px0px#1a1a2e;
+
+    z-index:10;
+
+}
+
+ 
+
+.hidden {
+
+    display:none; /* Classe para esconder/mostrar o overlay */
+
+}
